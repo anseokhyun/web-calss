@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>High Contrast Dark Timetable</title>
+    <style>
+        body {
+            font-family: 'Pretendard', -apple-system, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #0d1117; /* 더 깊은 블랙 */
+            color: #ffffff;
+        }
+
+        .container {
+            background: #161b22;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.8);
+            border: 1px solid #30363d;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 30px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 10px;
+            width: 680px;
+        }
+
+        th {
+            color: #8b949e;
+            padding: 10px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        /* 기본 셀 디자인 */
+        td {
+            background: #21262d;
+            padding: 20px;
+            text-align: center;
+            border-radius: 12px;
+            font-weight: 700; /* 글자 두께 강화 */
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* 교시 유닛 - 가장 밝은 하늘색 */
+        td:first-child {
+            background: #30363d;
+            color: #79c0ff; 
+            width: 50px;
+        }
+
+        /* 과목별 고대비 컬러 (글자색 강조) */
+        /* 각 컬러에 미세한 text-shadow를 넣어 가독성을 극대화했습니다. */
+        .math { 
+            color: #ff7b72; /* 밝은 레드/오렌지 */
+            border-bottom: 3px solid #ff7b72;
+        }
+        .korean { 
+            color: #a5d6ff; /* 밝은 블루 */
+            border-bottom: 3px solid #a5d6ff;
+        }
+        .english { 
+            color: #d2a8ff; /* 밝은 퍼플 */
+            border-bottom: 3px solid #d2a8ff;
+        }
+        .science { 
+            color: #7ee787; /* 밝은 그린 */
+            border-bottom: 3px solid #7ee787;
+        }
+        .art { 
+            color: #ffa657; /* 밝은 오렌지/골드 */
+            border-bottom: 3px solid #ffa657;
+        }
+
+        /* 마우스 호버 시 글자가 더 빛나게 */
+        td:not(:first-child):hover {
+            transform: translateY(-3px);
+            background: #2d333b;
+            filter: brightness(1.5);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>WEEKLY PLANNER</h2>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>MON</th>
+                <th>TUE</th>
+                <th>WED</th>
+                <th>THU</th>
+                <th>FRI</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td class="korean">국어</td>
+                <td class="math">수학</td>
+                <td class="english">영어</td>
+                <td class="science">과학</td>
+                <td class="art">미술</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="math">수학</td>
+                <td class="korean">국어</td>
+                <td class="science">과학</td>
+                <td class="english">영어</td>
+                <td class="art">미술</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class="english">영어</td>
+                <td class="science">과학</td>
+                <td class="math">수학</td>
+                <td class="korean">국어</td>
+                <td class="math">수학</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td class="science">과학</td>
+                <td class="english">영어</td>
+                <td class="art">음악</td>
+                <td class="math">수학</td>
+                <td class="korean">국어</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td class="art">체육</td>
+                <td class="math">수학</td>
+                <td class="korean">국어</td>
+                <td class="science">과학</td>
+                <td class="english">영어</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td class="art">체육</td>
+                <td class="science">과학</td>
+                <td class="english">영어</td>
+                <td class="math">수학</td>
+                <td class="science">지구과학</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td class="korean">창체</td>
+                <td class="art">동아리</td>
+                <td class="science">실험</td>
+                <td class="english">회화</td>
+                <td class="korean">자율</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
